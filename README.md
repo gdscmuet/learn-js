@@ -1,3 +1,8 @@
+# NOTE
+
+- You must maintain proper structure of the repo, control structure concepts must fall into "Control Structure" folder and so on.
+- You can also add any issue and we will assign it to you as per your request!
+
 # learn-js
 A repo dedicated to the introductory concepts of JavaScript
 
