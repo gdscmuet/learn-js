@@ -1,4 +1,4 @@
-# lean-js
+# learn-js
 A repo dedicated to the introductory concepts of JavaScript
 
 # How to contribute
