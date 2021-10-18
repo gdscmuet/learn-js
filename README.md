@@ -1,4 +1,6 @@
-# NOTE
+<img src="image.png" alt="Hacktober Fest Cover Image" align=center>
+
+<h1>NOTE</h1>
 
 - You must maintain proper structure of the repo, control structure concepts must fall into "Control Structure" folder and so on.
 - You can also add any issue and we will assign it to you as per your request!
