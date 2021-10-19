@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body style="margin: 50px;" class="bg-dark text-light">
+    <h1 class="text-center">Sign Up</h1>
+    <div style="margin: 50px;">
+        <form class="row g-3" id="myForm">
+            <div class="col-md-6">
+            <label for="inputEmai" class="form-label">Email</label>
+            <input type="email" class="form-control" id="inputEmail" placeholder="john@example.com" required>
+            </div>
+            <div class="col-md-6">
+            <label for="inputPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="inputPassword" required>
+            </div>
+            <div class="col-12">
+            <label for="inputAddress" class="form-label">Address</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" required>
+            </div>
+            <div class="col-12">
+            <label for="inputAddress2" class="form-label">Address 2</label>
+            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+            </div>
+            <div class="col-md-6">
+            <label for="inputCity" class="form-label">City</label>
+            <input type="text" class="form-control" id="inputCity" required>
+            </div>
+            <div class="col-md-4">
+            <label for="inputState" class="form-label">State</label>
+            <select id="inputState" class="form-select" required>
+                <option value="" selected>Choose...</option>
+                <option>Sindh</option>
+                <option>Punjab</option>
+                <option>Balochistan</option>
+                <option>Khyber Pakhtunkhwa</option>
+                <option>Other</option>
+            </select>
+            </div>
+            <div class="col-md-2">
+            <label for="inputZip" class="form-label">Zip</label>
+            <input type="text" class="form-control" id="inputZip" required>
+            </div>
+            <div class="col-12">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck" required>
+                <label class="form-check-label" for="gridCheck">
+                Check me out
+                </label>
+            </div>
+            </div>
+            <div class="col-12">
+            <button type="submit" class="btn btn-primary" id="signInbtn" disabled>Sign in</button>
+            </div>
+        </form>
+      </div>
+      <script>          
+            $('#gridCheck').change(function(){
+                if($('#gridCheck').prop('checked')){
+                    $('#signInbtn').prop('disabled', false);
+                }
+                else{
+                    $('#signInbtn').prop('disabled', true);
+                }
+            });
+            $("#signInbtn").click(function() {
+                let allAreFilled = true;
+                document.getElementById("myForm").querySelectorAll("[required]").forEach(function(i) {
+                    if (!allAreFilled) return;
+                    if (!i.value) allAreFilled = false;
+                })
+                if (!allAreFilled) {
+                    alert('Fill all the fields');
+                }
+            });
+      </script>
+</body>
+</html>
