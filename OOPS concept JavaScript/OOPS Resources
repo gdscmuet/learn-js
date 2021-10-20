@@ -1,0 +1,109 @@
+Those who prefer to learn from documentation, follow the link below: 
+https://www.geeksforgeeks.org/introduction-object-oriented-programming-javascript/
+
+Certain features or mechanisms which makes a Language Object-Oriented are: 
+Object, Classes, Encapsulation, Inheritance
+
+OBJECTS – An Object is a unique entity which contains property and methods. For example “car” is a real life Object, which have some characteristics like color, type, model, horsepower and performs certain action like drive. The characteristics of an Object are called as Property, in Object Oriented Programming and the actions are called methods. An Object is an instance of a class. Objects are everywhere in JavaScript almost every element is an Object whether it is a function,arrays and string. 
+
+Object can be created in two ways in JavaScript: by using Object Literal or by using Object Constructor. (examples below)
+
+Example for Object Literal:
+        //Defining object
+        let person = {
+            first_name:'Mukul',
+            last_name: 'Latiyan',
+
+            //method
+            getFunction : function(){
+                return (`The name of the person is 
+                  ${person.first_name} ${person.last_name}`)
+            },
+            //object within object
+            phone_number : {
+                mobile:'12345',
+                landline:'6789'
+            }
+        }
+        console.log(person.getFunction()); 
+        console.log(person.phone_number.landline);
+
+Output of the example:
+        The name of the person is Mukul Latiyan.
+        
+
+Example for Object Constructor:
+        //using a constructor
+        function person(first_name,last_name){
+           this.first_name = first_name;
+           this.last_name = last_name;
+        }
+        //creating new instances of person object
+        let person1 = new person('Mukul','Latiyan');
+        let person2 = new person('Rahul','Avasthi');
+
+        console.log(person1.first_name);
+        console.log(`${person2.first_name} ${person2.last_name}`);
+        
+Output of the example:
+        Mukul
+        Rahul Awasti
+        
+        
+CLASSES - Classes are blueprint of an Object. A class can have many Object, because class is a template while Object are instances of the class or the concrete implementation. 
+Before we move further into implementation, we should know unlike other Object Oriented Language there is no classes in JavaScript we have only Object. To be more precise, JavaScript is a prototype based object oriented language, which means it doesn’t have classes rather it define behaviors using constructor function and then reuse it using the prototype. 
+
+Example:
+          // Defining class using es6
+          class Vehicle {
+            constructor(name, maker, engine) {
+              this.name = name;
+              this.maker =  maker;
+              this.engine = engine;
+            }
+            getDetails(){
+                return (`The name of the bike is ${this.name}.`)
+            }
+          }
+          // Making object with the help of the constructor
+          let bike1 = new Vehicle('Hayabusa', 'Suzuki', '1340cc');
+          let bike2 = new Vehicle('Ninja', 'Kawasaki', '998cc');
+
+          console.log(bike1.name);    // Hayabusa
+          console.log(bike2.maker);   // Kawasaki
+          console.log(bike1.getDetails());
+          
+Output of example:
+          Hayabusa
+          Kawasaki
+          The name of the bike is Hayabusa.
+          
+INHERITANCE – It is a concept in which some property and methods of an Object is being used by another Object. Unlike most of the OOP languages where classes inherit classes, JavaScript Object inherits Object i.e. certain features (property and methods)of one object can be reused by other Objects. 
+Lets’s understand inheritance with example: 
+
+Example for inheritance: 
+          //Inhertiance example
+          class person{
+              constructor(name){
+                  this.name = name;
+              }
+              //method to return the string
+              toString(){
+                  return (`Name of person: ${this.name}`);
+              }
+          }
+          class student extends person{
+              constructor(name,id){
+                  //super keyword to for calling above class constructor
+                  super(name);
+                  this.id = id;
+              }
+              toString(){
+                  return (`${super.toString()},Student ID: ${this.id}`);
+              }
+          }
+          let student1 = new student('Mukul',22);
+          console.log(student1.toString());
+          
+Output of Example:
+          Name of person: Mukul,Student ID: 22
