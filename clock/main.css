@@ -73,3 +73,45 @@ body {
   transform: rotateZ(180deg);
   transform-origin: top center;
 }
+
+h1 {
+  padding: 4px 4px;
+  margin-bottom: 2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  width: 60vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-control {
+  display: block;
+  width: 23rem;
+  font-size: 15px;
+  padding: 5px 15px;
+  border: 1px solid black;
+  border-radius: 10px;
+  outline: none;
+}
+
+.btn-list {
+  margin: 2em 0em;
+}
+
+.btn {
+  margin: 1rem;
+  font-size: 14px;
+  padding: 6px 6px;
+  border: 1px solid transparent;
+  background-color: #b7edff;
+  border-radius: 5px;
+  font-weight: 5000;
+  font-weight: 500;
+  cursor: pointer;
+}
+p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 1rem;
+}

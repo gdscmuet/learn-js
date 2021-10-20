@@ -5,6 +5,7 @@
   <title>Clock Project</title>
 </head>
 <body>
+  <div class="container">
   <div class="clock">
     <div class="hour">
       <div class="hr"></div>
@@ -16,6 +17,20 @@
       <div class="sc"></div>
     </div>
   </div>
+
+  <div class="alarm">
+    
+      <h1>Enter time to set Alarm</h1>
+      <input type="alarm" class="form-control" id="alarmInput" aria-describedby="emailHelp" placeholder="Enter alarm time in yy-mm-dd hour:min:second">
+      <p>Note: Enter time in 24-hour format</p>
+
+      <div class="btn-list">
+      <button type="submit" id="submitBtn" class="btn btn-primary mx-2">Set Alarm</button>
+        <button type="submit" id="pauseBtn" class="btn btn-primary">Pause Alarm</button>
+      </div>
+    </div>
+  </div>
+
   <script>
     const hr = document.querySelector(".hr");
     const mn = document.querySelector(".mn");
@@ -31,6 +46,49 @@
       sc.style.transform = `rotateZ(${sec}deg)`;
     }
     startClock();
+
+    
+    submitBtn = document.getElementById('submitBtn')
+    alarmInput = document.getElementById('alarmInput')
+
+    submitBtn.addEventListener("click", setAlarm)
+
+    function setAlarm() {
+        // console.log("alarm set doin");
+
+        let alarmDate = new Date(alarmInput.value);
+        console.log("setting alarm");
+
+        let now = new Date();
+         
+        let alarmTime = alarmDate-now;
+        setTimeout(() => {
+          play();
+        }, alarmTime);
+
+      }
+
+         //Audio link to play and pause: 
+
+         var audio = new Audio('http://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Kangaroo_MusiQue_-_The_Neverwritten_Role_Playing_Game.mp3');
+         function play() {
+        //  var audio = new Audio('https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3');
+         audio.play();
+        }
+
+        //code to pause the alarm ringing...
+
+        let pauseBtn = document.getElementById('pauseBtn')
+        pauseBtn.addEventListener('click',pauseHandler)
+         
+        function pauseHandler()
+        {
+           audio.pause();
+        }
+        
+        
+        
+    
   </script>
 </body>
 </html>
