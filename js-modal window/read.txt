@@ -1,0 +1,3 @@
+modal-btn, modal-overlay, close-btn -- applied in JS
+
+open-modal-- applied to open the page
