@@ -1,0 +1,3 @@
+## This is a mini JS project of JS modal window made with plain Java Script and it is all about DOM manipulation and settting up the outcomes with the CSS code.
+
+# Any modifications are welcomed here...

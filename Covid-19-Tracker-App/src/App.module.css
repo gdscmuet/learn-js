@@ -1,0 +1,36 @@
+body {
+    background-color: rgb(250, 250, 250);
+     /* background-image: url("/covidbg.png");
+    background-size:cover ;
+    background-repeat: no-repeat;  */
+    /* background-image: linear-gradient(#FC4D35, #EF3C50, #E1296E); */
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.image {
+        width: 370;
+        margin-top: 50px ;
+}
+
+.covidFight {
+    width:  30%;
+    padding-left: 3%;
+    box-shadow: inherit;
+    box-sizing: content-box;
+    
+}
+
+@media (max-width: 700px) {
+    .container {
+        margin: 0 10%;
+    }
+    .image {
+        width: 100%;
+    }
+}
