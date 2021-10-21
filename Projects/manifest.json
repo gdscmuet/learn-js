@@ -1,0 +1,16 @@
+{
+    "manifest_version":2,
+    "name":"Password Generator",
+    "description":"Quick Generate",
+    "version":"1.0.0",
+    "icons":{"128":"logo.png"},
+    
+    
+    "browser_action":{
+        "default_icon":"logo.png",
+        "default_popup":"popup.html"
+    },
+    "permissions":["activeTab"]
+
+
+}

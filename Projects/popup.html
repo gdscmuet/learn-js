@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        
+		<link rel="stylesheet" href="style.css" type="text/css">
+		
+<style>
+            @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+    
+	background-color: rgb(155, 148, 148);
+	color: rgb(0, 0, 0);
+	display: flex;
+	font-family: "Muli", sans-serif;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	min-height: 10vh;
+}
+
+p {
+	margin: 5px 0;
+}
+
+h2 {
+	margin: 10px 0 20px;
+	text-align: center;
+}
+
+input[type="checkbox"] {
+	margin-right: 0;
+}
+
+.container {
+	background-color: #fa5f06;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.918);
+	padding: 20px;
+	width: 350px;
+	max-width: 100%;
+}
+
+.result-container {
+	background-color: rgba(253, 253, 253, 0.4);
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	position: relative;
+	font-size: 18px;
+	letter-spacing: 1px;
+	padding: 12px 10px;
+	height: 50px;
+	width: 100%;
+}
+
+.result-container #result {
+	word-wrap: break-word;
+	max-width: calc(100% - 40px);
+}
+
+.result-container .btn {
+	font-size: 20px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	height: 40px;
+	width: 40px;
+}
+
+.btn {
+	border: none;
+	color: rgb(255, 255, 255);
+	cursor: pointer;
+	font-size: 16px;
+	padding: 8px 12px;
+	background-color: #000000;
+}
+
+.btn-large {
+	display: block;
+	width: 100%;
+}
+
+.setting {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 15px 0;
+}
+
+@media screen and (max-width: 400px) {
+	.result-container {
+		font-size: 14px;
+	}
+}
+
+
+
+	
+
+
+
+
+
+
+        </style>
+	</head>
+
+<body>
+	<!-- INSERT HTML HERE -->
+<div class="container">
+	<h2>Password Generator </h2>
+	<div class="result-container">
+		<span id="result"></span>
+		<button class="btn" id="clipboard">
+			<i class="far fa-clipboard"></i>
+		</button>
+	</div>
+	<div class="settings">
+		<div class="setting">
+			<label>Password length</label>
+			<input type="number" id="length" min="4" max="20" value="6" />
+		</div>
+		<div class="setting">
+			<label>Include uppercase letters</label>
+			<input type="checkbox" id="uppercase" checked />
+		</div>
+		<div class="setting">
+			<label>Include lowercase letters</label>
+			<input type="checkbox" id="lowercase" checked />
+		</div>
+		<div class="setting">
+			<label>Include numbers</label>
+			<input type="checkbox" id="numbers" checked />
+		</div>
+		<div class="setting">
+			<label>Include symbols</label>
+			<input type="checkbox" id="symbols" checked />
+		</div>
+	</div>
+	<button class="btn btn-large" id="generate">
+		Generate Password
+	</button>
+</div>
+<script src="background.js"></script>
+	
+  </body>
+</html>
