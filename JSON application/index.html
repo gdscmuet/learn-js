@@ -17,9 +17,6 @@
         <!-- <li></li> -->
     </ul>
     </div>
-
-
-
     <script>
         let fetchBtn = document.addEventListener('click', fetchHandler)
         let list = document.getElementById('list')
@@ -30,33 +27,18 @@
              let url = "https://api.github.com/users"
              const resp= await fetch(url);
              const users = await resp.json(); //convertng the resp into object via JSON
-            //  console.log(users)
-
-        
+            //  console.log(users)        
             let html=""
             //Iterating through each array and printing the "login" on the DOM.
-
              users.forEach(element => {
                  html+=`  <li>${element.login}</li>`
-                 
              });
              //appending the final html into our list i.e. <ul> element 
-                
-               list.innerHTML=html;
-
-             
+               list.innerHTML=html;             
          }
-
-         
-
-
-
 
         fetchUsers();//calling fetch users
        }
-
-
-
     </script>
 </body>
 </html>
