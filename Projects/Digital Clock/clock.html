@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="clock.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+</head>
+<body>
+    <div class="toggle-position">
+        <input type="checkbox" class="checkbox" id="checkbox">
+        <label for="checkbox" class = "label">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <div class="ball"></div>
+        </label>
+    </div>
+
+    <div class="main">
+        <div class="badge">
+            Clock
+        </div>
+
+        <div class="time">
+            <span id="h">00</span> :
+            <span id="m">00</span> :
+            <span id="s">00</span>
+        </div>
+
+    </div>
+
+    <script src="clock.js"></script>
+</body>
+</html>
