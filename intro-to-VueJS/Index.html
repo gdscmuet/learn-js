@@ -1,0 +1,50 @@
+<!-- What is Vue Exactly? -->
+<!-- Vue (pronounced /vjuː/, like view) is a progressive framework for building user interfaces. 
+    Unlike other monolithic frameworks, 
+    Vue is designed from the ground up to be incrementally adoptable. 
+    The core library is focused on the view layer only, and is easy to
+     pick up and integrate with other libraries or existing projects. 
+    On the other hand, Vue is also perfectly capable of powering sophisticated 
+    Single-Page Applications when used in combination with modern tooling and supporting libraries. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Js</title>
+
+    <!-- Before Starting to write code with VueJs you need to include CDN in header -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <!-- Above CDN and Docs of vue Can be found at
+    https://vuejs.org/v2/guide/
+    -->
+  </head>
+  <body>
+
+    <!-- THis is the Only DIV which is required to run the whole VueJs app
+        we have given div below an id="app" , and we have used here text interpolation to render values dynamically
+         "{{}}" in between we have 
+        rendered our variable which is declared in script section
+        -->
+    <div id="app">{{ message }}</div>
+  </body>
+
+  <script>
+
+      //Here we have create single app instance which controls whole of our VueJs Application
+    var app = new Vue({
+
+        //below el:"#app" refer to our div ID in html, which conntects everything 
+      el: "#app",
+
+      // and this is How you declare variable , and data is reserved by VueJs, 
+      //You just create data object and create your variable inside it
+      data: {
+        message: "Hello Vue!",
+      },
+    });
+  </script>
+</html>
