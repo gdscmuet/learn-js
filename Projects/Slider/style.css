@@ -1,0 +1,35 @@
+.container2{
+    width: 60%;
+    height: 60%;
+   border: 3px solid black;
+    position:relative;
+    top:18%;
+    margin: 0% auto 100px auto;
+    top:300;
+
+}
+.container2>img{
+    width:100%;
+    height:100%;
+    position: absolute;
+    box-shadow: 0px 0px 25px 2px black;
+    
+}
+#btn{
+    position: absolute;
+    top:50%;
+    background-color: rgba(255,255,255,0.1);
+    color:white;
+    border:none;
+    height: 8%;
+    width:30px;
+}
+#btn:hover{
+   opacity: 1;
+background-color: black;
+}
+#btn.r{
+position: relative;
+float:right;  
+}
+
