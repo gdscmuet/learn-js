@@ -1,0 +1,54 @@
+<html>
+  
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="container2">
+<img class="img" src="2.jpeg">
+<img class="img" src="3.jpeg">
+<img class="img" src="4.jpeg">
+<button id="btn" onclick="btn(-1)"  class="l">&#10094;</button>
+<button id="btn" onclick="btn(1)" class="r">&#10095;</button>
+</div>
+<script>
+var index=0;
+    
+slide(index);
+function slide(image)
+{var all=document.getElementsByClassName("img");
+ var i;  
+ if(image>=all.length)
+    {index=0;}
+ if(image<0)
+     {index=all.length-1}
+ 
+ for(i=0;i<all.length;i++)
+    {
+        all[i].style.display="none";
+      }
+ 
+    all[index].style.display="block";
+ }
+    
+ function auto(){
+     setTimeout(auto,5000);   ///set miliseconds here.
+     
+     //forward
+     index=index+1;
+     slide(index);
+     ///
+ }    
+auto();
+    
+function btn(n){
+    
+   index=index+n;
+    slide(index);
+        
+    }
+    
+</script>  
+    
+</body>
+</html>
