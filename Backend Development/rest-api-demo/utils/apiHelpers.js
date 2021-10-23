@@ -18,3 +18,30 @@ export const cors = (req, res, next) => {
   next();
 };
 export default cors;
+
+export const restApiValidation = (req, res, next) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    const error = new Error(`Bad Request`);
+    error.data = errors.array().map((err) => {
+      return {
+        message: err.msg || "",
+        param: err.param || "",
+        location: err.location || "",
+        value: err.value || "",
+      };
+    });
+    error.code = 400;
+    throw error;
+  }
+  return true;
+};
+
+export const response = (res, result) => {
+  const response = {
+    message: "Success",
+    result: result,
+    errors: [],
+  };
+  res.status(200).json(response);
+};
