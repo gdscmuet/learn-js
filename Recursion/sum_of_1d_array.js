@@ -45,4 +45,10 @@ runningSum(array); // function call
 
   Note: recursive functions starts from index 1 of given array because we already assign index 0 value to result at the start
   recursive function runs until the index given to recursive function is greater than equal to the length or array given to runningSum function
+
+
+  Happy Coding!!!
+
+
+  Author: https://github.com/officialabdulrehman
 */
