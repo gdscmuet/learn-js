@@ -1,4 +1,5 @@
 import { Router } from "express";
+import userService from "../services/user";
 import { response, restApiValidation } from "../utils/apiHelpers";
 
 export const userRouter = Router();
