@@ -17,6 +17,6 @@ app.use(cors); // enable cors
 app.set("port", PORT || 3000); // set server port
 app.use(express.json()); // parse json
 
-app.use("/api/v1/user", userRouter.Router()); // initialize router here
+app.use("/api/v1/user", userRouter); // initialize router here
 
 app.use(defaultErrorHandler); // handle errors at one place
