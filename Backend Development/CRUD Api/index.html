@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Rest API in NodeJS</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        #root {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 50%;
+            min-width: 300px;
+            border: 3px solid gray;
+            border-radius: 8px;
+            padding: 3px;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <h1>Basic Rest API in NodeJS</h1>
+        <div id="getBooks" style="display:flex; flex-direction: column; width: 100%">
+            <pre id="books"></pre>
+            <button type="button" onclick="getBooks()">Get Books</button>
+        </div>
+        <div id="getBook" style="display:flex; flex-direction: column; width: 100%">
+            <pre id="book"></pre>
+            <div style="display: flex; gap: 8px; width: 100%;">
+                <input id="bookID" type="number" placeholder="Book id" style="flex-grow: 1;" />
+                <button type="button" onclick="getBook()" style="flex-grow: 1;">Get Book</button>            
+            </div>
+        </div>
+        <div id="addBook" style="display:flex; flex-direction: column; width: 100%; gap: 3px">
+            <div style="display: flex; gap: 8px; width: 100%;">
+                <label for="name" style="width: 25%; min-width: fit-content;">Name:</label>
+                <input id="name" name="name" type="text" placeholder="Book name" style="flex-grow: 1;" />
+            </div>
+            <div style="display: flex; gap: 8px; width: 100%;">
+                <label for="author" style="width: 25%; min-width: fit-content;">Author:</label>
+                <input id="author" name="author" type="text" placeholder="Book author" style="flex-grow: 1;" />
+            </div>
+            <div style="display: flex; gap: 8px; width: 100%;">
+                <label for="edition" style="width: 25%; min-width: fit-content;">Edition:</label>
+                <input id="edition" name="edition" type="text" placeholder="Book edition" style="flex-grow: 1;" />
+            </div>
+            <div style="display: flex; gap: 8px; width: 100%;">
+                <label for="price" style="width: 25%; min-width: fit-content;">Price:</label>
+                <input id="price" name="price" type="number" placeholder="Book price (USD)" style="flex-grow: 1;" />
+            </div>
+            <button type="button" onclick="addBook()">Add Book</button>
+        </div>
+        <div id="updateBook" style="display:flex; flex-direction: column; width: 100%; gap: 3px">
+            <div style="display: flex; gap: 8px; width: 100%;">
+                <label for="bookID" style="width: 25%; min-width: fit-content;">bookID:</label>
+                <input id="newbookID" name="id" type="text" placeholder="Book ID" style="flex-grow: 1;" />
+            </div>
+            <div style="display: flex; gap: 8px; width: 100%;">
+                <label for="name" style="width: 25%; min-width: fit-content;">Name:</label>
+                <input id="newname" name="name" type="text" placeholder="Book name" style="flex-grow: 1;" />
+            </div>
+            <div style="display: flex; gap: 8px; width: 100%;">
+                <label for="author" style="width: 25%; min-width: fit-content;">Author:</label>
+                <input id="newauthor" name="author" type="text" placeholder="Book author" style="flex-grow: 1;" />
+            </div>
+            <div style="display: flex; gap: 8px; width: 100%;">
+                <label for="edition" style="width: 25%; min-width: fit-content;">Edition:</label>
+                <input id="newedition" name="edition" type="text" placeholder="Book edition" style="flex-grow: 1;" />
+            </div>
+            <div style="display: flex; gap: 8px; width: 100%;">
+                <label for="price" style="width: 25%; min-width: fit-content;">Price:</label>
+                <input id="newprice" name="price" type="number" placeholder="Book price (USD)" style="flex-grow: 1;" />
+            </div>
+            <button type="button" onclick="updateBook()">Update Book</button>
+        </div>
+        <div id="deleteBook" style="display:flex; flex-direction: column; width: 100%">
+            <div style="display: flex; gap: 8px; width: 100%;">
+                <input id="deletebookID" type="number" placeholder="Book id" style="flex-grow: 1;" />
+                <button type="button" onclick="deleteBook()" style="flex-grow: 1;">Delete Book</button>            
+            </div>
+        </div>
+    </div>
+    <script>
+        function getBooks(){
+            fetch('/books')
+            .then(response => response.json())
+            .then(data => {
+                let text = JSON.stringify(data, null, 2);
+                document.getElementById('books').innerText = text;
+            });
+        }
+        function getBook(){
+            const bookID = document.getElementById('bookID').value;
+            fetch('/books/'+bookID) // /books/1 matches /books/:id route on backend
+            .then(response => response.json())
+            .then(data => {
+                let text = JSON.stringify(data, null, 2);
+                document.getElementById('book').innerText = text;
+            });
+        }
+        function addBook(){
+            const name = document.getElementById('name').value;
+            const author = document.getElementById('author').value;
+            const edition = document.getElementById('edition').value;
+            const price = document.getElementById('price').value;
+            const book = {
+                name: name,
+                author: author,
+                edition: edition,
+                price: price,
+            };
+            fetch('/books', {
+                method: 'POST', // *GET, POST, PUT, DELETE, etc.
+                headers: {
+                    'Content-Type': 'application/json'
+                },            
+                body: JSON.stringify(book)
+            }).then(response => alert('Book added successfully')).catch(() => alert('Couldnt add book'));
+        }
+        function updateBook(){
+            const id = document.getElementById('newbookID').value;
+            const name = document.getElementById('newname').value;
+            const author = document.getElementById('newauthor').value;
+            const edition = document.getElementById('newedition').value;
+            const price = document.getElementById('newprice').value;
+            fetch('/books', {
+                method: 'PUT', // *GET, POST, PUT, DELETE, etc.
+                headers: {
+                    'Content-Type': 'application/json'
+                },            
+                body: JSON.stringify({
+                    id: id,
+                    name: name,
+                    author: author,
+                    edition: edition,
+                    price: price,
+                })
+            }).then(response => alert('Book updated successfully')).catch(() => alert('Couldnt update book'));
+        }
+        function deleteBook(){
+            const id = document.getElementById('deletebookID').value;
+            fetch('/books/'+id, {
+                method: 'DELETE', // *GET, POST, PUT, DELETE, etc.
+            }).then(response => alert('Book deleted successfully')).catch(() => alert('Couldnt delete book'));
+        }
+    </script>
+</body>
+</html>
