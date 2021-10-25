@@ -1,0 +1,354 @@
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	   -moz-border-radius: $radius;
+		-ms-border-radius: $radius;
+		 -o-border-radius: $radius;
+			border-radius: $radius;
+}
+
+@mixin box-shadow($x, $y, $blur, $spread, $color) {
+	-webkit-box-shadow: $x $y $blur $spread $color;
+	   -moz-box-shadow: $x $y $blur $spread $color;
+			box-shadow: $x $y $blur $spread $color;
+}
+
+@mixin box-shadow-inset($x, $y, $blur, $spread, $color) {
+	-webkit-box-shadow: inset $x $y $blur $spread $color;
+	   -moz-box-shadow: inset $x $y $blur $spread $color;
+			box-shadow: inset $x $y $blur $spread $color;
+}
+
+@mixin transition($property, $duration, $function) {
+	-webkit-transition: $property $duration $function;
+	   -moz-transition: $property $duration $function;
+		-ms-transition: $property $duration $function;
+		 -o-transition: $property $duration $function;
+			transition: $property $duration $function;
+}
+
+@mixin transitionWithEffect($effect, $duration, $loop, $function) {
+	-webkit-transition: $effect $duration $loop $function;
+	   -moz-transition: $effect $duration $loop $function;
+		-ms-transition: $effect $duration $loop $function;
+		 -o-transition: $effect $duration $loop $function;
+			transition: $effect $duration $loop $function;
+}
+
+@mixin transitionMultiple($properties, $duration, $function) {
+	-webkit-transition-property: $properties;
+			transition-property: $properties;
+	-webkit-transition-duration: $duration;
+			transition-duration: $duration;
+	-webkit-transition-timing-function: $function;
+			transition-timing-function: $function;
+}
+
+@mixin mirror($mirrorX, $mirrorY) {
+	-webkit-transform: scale($mirrorX, $mirrorY);
+	   -moz-transform: scale($mirrorX, $mirrorY);
+		-ms-transform: scale($mirrorX, $mirrorY);
+		 -o-transform: scale($mirrorX, $mirrorY);
+			transform: scale($mirrorX, $mirrorY);
+}
+
+@mixin mirrorHorizontal($mirrorX) {
+	-webkit-transform: scale($mirrorX);
+	   -moz-transform: scale($mirrorX);
+		-ms-transform: scale($mirrorX);
+		 -o-transform: scale($mirrorX);
+			transform: scale($mirrorX);
+						 filter: FlipH;
+}
+
+@mixin scale($scale) {
+	-webkit-transform: scale($scale);
+	   -moz-transform: scale($scale);
+		-ms-transform: scale($scale);
+		 -o-transform: scale($scale);
+			transform: scale($scale);
+}
+
+@mixin scaleX($scale) {
+	-webkit-transform: scaleX($scale);
+	   -moz-transform: scaleX($scale);
+		-ms-transform: scaleX($scale);
+		 -o-transform: scaleX($scale);
+			transform: scaleX($scale);
+}
+
+@mixin scaleY($scale) {
+	-webkit-transform: scaleY($scale);
+	   -moz-transform: scaleY($scale);
+		-ms-transform: scaleY($scale);
+		 -o-transform: scaleY($scale);
+			transform: scaleY($scale);
+}
+
+@mixin rotate($rotate) {
+	-webkit-transform: rotate($rotate);
+	   -moz-transform: rotate($rotate);
+		-ms-transform: rotate($rotate);
+		 -o-transform: rotate($rotate);
+			transform: rotate($rotate);
+}
+
+@mixin blur($blur) {
+	-webkit-filter: blur($blur);
+	   -moz-filter: blur($blur);
+		-ms-filter: blur($blur);
+		 -o-filter: blur($blur);
+			filter: blur($blur);
+}
+
+@mixin transform($scale, $rotate, $translateX, $translateY, $skewX, $skewY) {
+	-webkit-transform: scale($scale) rotate($rotate) translateX($translateX) translateY($translateY) skewX($skewX) skewY($skewY);
+	   -moz-transform: scale($scale) rotate($rotate) translateX($translateX) translateY($translateY) skewX($skewX) skewY($skewY);
+		-ms-transform: scale($scale) rotate($rotate) translateX($translateX) translateY($translateY) skewX($skewX) skewY($skewY);
+		 -o-transform: scale($scale) rotate($rotate) translateX($translateX) translateY($translateY) skewX($skewX) skewY($skewY);
+			transform: scale($scale) rotate($rotate) translateX($translateX) translateY($translateY) skewX($skewX) skewY($skewY);
+}
+
+@mixin translate($translateX, $translateY, $translateZ) {
+	-webkit-transform: translate3d($translateX, $translateY, $translateZ);
+	   -moz-transform: translate3d($translateX, $translateY, $translateZ);
+		-ms-transform: translate3d($translateX, $translateY, $translateZ);
+		 -o-transform: translate3d($translateX, $translateY, $translateZ);
+			transform: translate3d($translateX, $translateY, $translateZ);
+}
+
+@mixin translateXY($translateX, $translateY) {
+	-webkit-transform: translateX($translateX) translateY($translateY);
+	   -moz-transform: translateX($translateX) translateY($translateY);
+		-ms-transform: translateX($translateX) translateY($translateY);
+		 -o-transform: translateX($translateX) translateY($translateY);
+			transform: translateX($translateX) translateY($translateY);
+}
+
+@mixin translateX($translateX) {
+	-webkit-transform: translateX($translateX);
+	   -moz-transform: translateX($translateX);
+		-ms-transform: translateX($translateX);
+		 -o-transform: translateX($translateX);
+			transform: translateX($translateX);
+}
+
+@mixin translateY($translateY) {
+	-webkit-transform: translateY($translateY);
+	   -moz-transform: translateY($translateY);
+		-ms-transform: translateY($translateY);
+		 -o-transform: translateY($translateY);
+			transform: translateY($translateY);
+}
+
+@mixin translate3d($translateX, $translateY, $translateZ) {
+	-webkit-transform: translate3d( $translateX, $translateY, $translateZ);
+	   -moz-transform: translate3d( $translateX, $translateY, $translateZ);
+		-ms-transform: translate3d( $translateX, $translateY, $translateZ);
+		 -o-transform: translate3d( $translateX, $translateY, $translateZ);
+			transform: translate3d( $translateX, $translateY, $translateZ);
+}
+
+@mixin ellipsis($nLines) {
+	display: -webkit-box;
+	-webkit-line-clamp: $nLines;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+@mixin box-sizing( $type: border-box ) {
+	-webkit-box-sizing: $type;
+	   -moz-box-sizing: $type;
+		 -o-box-sizing: $type;
+		-ms-box-sizing: $type;
+			box-sizing: $type;
+}
+
+@mixin opacity($opacity) {
+	opacity: $opacity ;
+	$opacity-ie: $opacity * 100;
+	filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin backgroundgradient($startColor, $endColor) {
+    background-color: $startColor;
+    background-image: -webkit-gradient(linear, left top, left bottom, from($startColor), to($endColor));
+    background-image: -webkit-linear-gradient(top, $startColor, $endColor);
+    background-image:    -moz-linear-gradient(top, $startColor, $endColor);
+    background-image:     -ms-linear-gradient(top, $startColor, $endColor);
+    background-image:      -o-linear-gradient(top, $startColor, $endColor);
+    background-image:         linear-gradient(top, $startColor, $endColor);
+    filter:            progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$startColor}', endColorStr='#{$endColor}');
+}
+
+@mixin radialGradient( $colorInner, $colorMedium, $colorOuter ) {
+	background: $colorOuter; /* For browsers that do not support gradients */
+	background: -webkit-radial-gradient( $colorInner, $colorMedium, $colorOuter ); /* Safari 5.1 to 6.0 */
+	background:    -moz-radial-gradient( $colorInner, $colorMedium, $colorOuter ); /* For Firefox 3.6 to 15 */
+	background: 	 -o-radial-gradient( $colorInner, $colorMedium, $colorOuter ); /* For Opera 11.6 to 12.0 */
+	background: 		radial-gradient( $colorInner, $colorMedium, $colorOuter ); /* Standard syntax */
+}
+
+@mixin grayscale( $value ) {
+	-webkit-filter: grayscale( $value ); /* Safari 6.0 - 9.0 */
+    filter: grayscale( $value );
+}
+
+/*
+Placeholder
+*/
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  @include optional-at-root('::-webkit-input-placeholder') {
+	@content;
+  }
+
+  @include optional-at-root(':-moz-placeholder') {
+	opacity: 1;
+	@content;
+  }
+
+  @include optional-at-root('::-moz-placeholder') {
+	opacity: 1;
+    @content;
+  }
+
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
+}
+
+/*
+* Dotted Border - A SASS mixin to help you increase spacing between the dots of border-style:dotted.
+* By @florbraz
+* Documentation and examples - github.com/florbraz/Dotted-Border-w-custom-spacing-SCSS-Mixin
+* V1.0
+*/
+@mixin dottedBorder($color, $orientation, $position, $spacing, $size) {
+	background-position: $position;
+	@if $orientation == horizontal {
+		background-image: linear-gradient(to right, $color 90%, rgba(255,255,255,0) 0%);
+		background-size: $spacing $size;
+		background-repeat: repeat-x;
+	}
+	@else {
+		background-image: linear-gradient($color 90%, rgba(255,255,255,0) 0%);
+		background-size: $size $spacing;
+		background-repeat: repeat-y;
+	}
+	.ie9 & {
+		border-#{$position}:1px dotted $color;      
+	}
+}
+
+/*
+* Function to effect of newsletter message box
+*/
+@-webkit-keyframes showSweetAlert {
+    0% {
+        transform: scale(.7);
+        -webkit-transform: scale(.7)
+    }
+    45% {
+        transform: scale(1.05);
+        -webkit-transform: scale(1.05)
+    }
+    80% {
+        transform: scale(.95);
+        -webkit-transform: scale(.95)
+    }
+    to {
+        transform: scale(1);
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes showSweetAlert {
+    0% {
+        transform: scale(.7);
+        -webkit-transform: scale(.7)
+    }
+    45% {
+        transform: scale(1.05);
+        -webkit-transform: scale(1.05)
+    }
+    80% {
+        transform: scale(.95);
+        -webkit-transform: scale(.95)
+    }
+    to {
+        transform: scale(1);
+        -webkit-transform: scale(1)
+    }
+}
+
+@-webkit-keyframes hideSweetAlert {
+    0% {
+        transform: scale(1);
+        -webkit-transform: scale(1)
+    }
+    to {
+        transform: scale(.5);
+        -webkit-transform: scale(.5)
+    }
+}
+
+@keyframes hideSweetAlert {
+    0% {
+        transform: scale(1);
+        -webkit-transform: scale(1)
+    }
+    to {
+        transform: scale(.5);
+        -webkit-transform: scale(.5)
+    }
+}
+
+
+
+/**
+ * Mixin for animations and Keyframes
+ */
+
+
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation:    $animations;
+    -o-animation:      $animations;
+    animation:         $animations;
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+@mixin mask($arguments) {
+  -webkit-mask: $arguments;
+          mask: $arguments;
+}

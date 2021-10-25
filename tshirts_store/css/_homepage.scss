@@ -1,0 +1,216 @@
+
+
+main {
+    text-align: center;
+    padding-bottom: 35px;
+
+    .price-calculator {
+        padding: 35px 0;
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 26px;
+            color: $color_00;
+            margin-bottom: 25px;
+        }
+
+        .filters {
+            background-color: $color_03;
+            padding: 25px;
+            text-align: left;
+            font-family: 'Lato', sans-serif;
+            
+
+            .single-filter {
+                display: inline-block;
+                margin-right: 25px;
+                margin-bottom: 18px;
+
+                .option-filter {
+                    font-size: 0;
+
+                    .option-button {
+                        cursor: pointer;
+                        line-height: 35px;
+                        padding: 0 10px;
+                        display: inline-block;
+                        background-color: #FFF;
+                        margin: 0;
+                    }
+
+                    .selected {
+                        background-color: $color_04;
+                        color: #FFF;
+                    }
+
+                }
+
+                input, .option-button, select {
+                    height: 35px;
+                    margin: 0;
+                    font-size: 12px;
+                }
+
+                input[type=number] {
+                    max-width: 100px;
+                }
+
+                select {
+                    padding-right: 18px;
+                }
+
+                .filter-label {
+                    display: block;
+                   font-size: 12px;
+                   margin-bottom: 3px;
+
+                }
+
+            }
+        }
+
+        .results {
+            padding: 12px 0;
+
+            div {
+                margin-top: 15px;
+            }
+
+            .product-picture {
+                border: 1px solid $color_02;
+                padding: 30px;
+
+                .picture-area {
+
+                }
+
+                
+            }
+
+            .product-description {
+                text-align: left;
+                padding-left: 25px;
+
+                h2 {
+                    font-size: 17px;
+                    font-weight: 700;
+                    margin-bottom: 18px;
+                }
+
+                p {
+                    font-size: 13px;
+                    line-height: 13px;
+                    font-weight: bold;
+
+                    span {
+                        font-weight: normal;
+                    }
+
+                    
+                }
+
+                #price {
+                    margin-top: -8px;
+                    font-size: 28px;
+                    font-weight: bold;
+                }
+
+                #complete-order {
+                    cursor: pointer;
+                    text-align: center;
+                    height: 60px;
+                    line-height: 60px;
+                    width: 260px;
+                    background-color: $color_05;
+                    color: white;
+                    font-weight: bold;
+                    transition: 0.5s;
+
+                    &:hover {
+                        background-color: $color_05_hover;
+                        transition: 0.5s;
+                    }
+                }
+            }
+
+        }
+
+    }
+}
+
+
+
+
+/* **********************************************************************************************
+***********************************   MEDIA QUERIES   ******************************************* 
+********************************************************************************************** */
+
+
+
+
+// Small Screens ****************************************************************************
+/* max-width 640px *********************************************************************/
+
+@media only screen and (max-width: 40em) {
+   
+    main {
+
+        .price-calculator {
+
+            .results {
+                .product-description {
+                    padding-left: 0;
+                }
+            }
+        
+        
+        
+        }
+
+    }
+
+   
+}   
+// End of small Screens
+   
+   
+   
+// Medium Screens ***************************************************************************
+/* min-width 641px and max-width 1023px ************************************************/
+
+@media only screen and (min-width: 40.063em) and (max-width: 63.938em) {
+   
+
+}
+
+// End of Medium Screens
+   
+   
+   
+   
+// Large Screens ****************************************************************************
+/* min-width 1024px and max-width 1440px ***********************************************/
+
+@media only screen and (min-width: 64em) and (max-width: 90em) { 
+   
+    
+
+   
+}
+
+// End of Large Screens
+   
+   
+   
+// Extra Large Screens **********************************************************************
+/* min-width 1441px ********************************************************************/
+
+@media only screen and (min-width: 90.063em) {
+   
+    
+         
+}
+
+// End of Extra Large Screens
+

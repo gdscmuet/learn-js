@@ -1,0 +1,139 @@
+
+/* Variáveis *******************************************************************************/
+
+$topbar-height-large: 90px;
+$topbar-height-medium: 80px;
+$topbar-height-small: 70px;
+
+$menu_li_color: #FFF;
+$sliding_menu_color: #FFF;
+$topbar_color: $color_01;
+
+$header-shadow: rgba(0, 0, 0, 0.12);
+
+
+
+/* Fim das Variáveis */
+
+
+
+
+
+/* Global Header Styles ********************************************************************/
+
+
+   header {
+      background-color:  $topbar_color;
+      @include box-shadow(0px, 2px, 4px, 1px, $header-shadow);
+      text-align: center;
+      line-height: 0;
+      position: fixed;
+      z-index: 98;
+      top: 0;
+      width: 100%;
+   }
+      
+
+      
+
+   .ghost-element {
+      width: 100%;
+      height: $topbar-height-small;
+   }
+  
+
+/* End of Global Header Styles */
+
+
+
+/* Main Header Styles ****************************************************/
+
+   .main-header {
+      height: $topbar-height-small;
+      padding-left: 8px;
+      padding-right: 8px;
+
+      
+      
+   }
+
+/* End of Main Header Styles */
+
+
+
+
+
+
+
+
+
+
+/* **********************************************************************************************
+***********************************   MEDIA QUERIES   ******************************************* 
+********************************************************************************************** */
+
+
+// Small Screens ****************************************************************************
+/* max-width 640px *********************************************************************/
+
+   @media only screen and (max-width: 40em) {
+      
+      
+      
+
+      
+
+
+
+   }
+
+// End of small Screens
+
+
+    
+
+
+// Medium Screens ***************************************************************************
+    /* min-width 641px and max-width 1023px ************************************************/
+
+   @media only screen and (min-width: 40.063em) and (max-width: 63.938em) {
+
+      
+
+   }
+
+// End of Medium Screens
+
+
+
+
+
+// Large Screens ****************************************************************************
+/* min-width 1024px and max-width 1440px ***********************************************/
+
+   @media only screen and (min-width: 64em) and (max-width: 90em) {
+        
+     
+
+   }
+
+// End of Large Screens
+
+
+
+
+
+// Extra Large Screens **********************************************************************
+/* min-width 1441px ********************************************************************/
+
+   @media only screen and (min-width: 90.063em){
+
+     
+     
+   }
+
+// End of Extra Large Screens
+
+
+
+
