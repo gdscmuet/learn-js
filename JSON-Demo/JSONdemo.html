@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>    
+<body>
+
+<h2>Creating Object from JSON String</h2>
+
+<p id="JSONdemo"></p>
+
+<script>
+//JSON stands for JavaScript Object Notation. A JSON file has .json as its extension and the data inside are represented in a key:value pair
+
+let JSONdemo = '{"students":['+
+'{"firstName":"Farheen","lastName":"Kazi" },' +
+'{"firstName":"Hira","lastName":"Amir" },' +
+'{"firstName":"Amber","lastName":"Arain" }]}';
+
+//In JavaScript, JSON.parse() converts JSON data to objects and JSON.stringify() converts an object's key:value pair to JSON data.
+
+const obj = JSON.parse(JSONdemo);
+document.getElementById("JSONdemo").innerHTML =
+obj.students[1].firstName + " " + obj.students[1].lastName;
+</script>
+
+</body>
+</html>

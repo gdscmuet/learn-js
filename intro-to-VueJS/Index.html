@@ -1,0 +1,98 @@
+<!-- What is Vue Exactly? -->
+<!-- Vue (pronounced /vjuː/, like view) is a progressive framework for building user interfaces. 
+    Unlike other monolithic frameworks, 
+    Vue is designed from the ground up to be incrementally adoptable. 
+    The core library is focused on the view layer only, and is easy to
+     pick up and integrate with other libraries or existing projects. 
+    On the other hand, Vue is also perfectly capable of powering sophisticated 
+    Single-Page Applications when used in combination with modern tooling and supporting libraries. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Js</title>
+
+    <!-- Before Starting to write code with VueJs you need to include CDN in header -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <!-- Above CDN and Docs of vue Can be found at
+    https://vuejs.org/v2/guide/
+    -->
+  </head>
+  <body>
+    <!-- THis is the Only DIV which is required to run the whole VueJs app
+        we have given div below an id="app" , and we have used here text interpolation to render values dynamically
+         "{{}}" in between we have 
+        rendered our variable which is declared in script section
+        -->
+    <div id="app">
+      <div>
+        <p>Displaying Just Message below</p>
+        <h1>{{ message }}</h1>
+
+
+        <!-- How you can create and call the methods? -->
+        <!-- This statement with message1 will just print the message like we did in above h1 -->
+        <p>Here we see how we can reverse the message</p>
+        <p>{{ message1 }}</p>
+        <!-- In below we are calling referseMessage function which is defined in script and it reverses our text -->
+        <button v-on:click="reverseMessage">Reverse Message</button>
+
+        <!-- Now we will see how we can use conditions like (if , else if) -->
+
+        <p>we will show and hide our message below</p>
+        <!-- He we are using v-if to check the condtion , if thats true than show that h2 , else hide it, showHide variable is declared in data -->
+        <h2 v-if="showHide">I am Hidden as well as showen</h2>
+        <span>Click on button below to show and hide Message</span>
+        <br>
+
+        <!-- And below on button click we are calling toggle methods which changes showHide to true 
+          if its already false, else it makes false to true if its hidden
+
+          and also we are showing out text inside based on conditon, like if you want the value to be seen it shows "SHOW" on button , else "Hide"
+        -->
+        <button v-on:click="toggle">{{ showHide ? "Hide" : "Show" }}</button>
+
+      </div>
+    </div>
+
+    
+
+    
+  </body>
+
+  <script>
+    //Here we have create single app instance which controls whole of our VueJs Application
+    var app = new Vue({
+      //below el:"#app" refer to our div ID in html, which conntects everything
+      el: "#app",
+
+      // and this is How you declare variable , and data is reserved by VueJs,
+      //You just create data object and create your variable inside it
+      data: {
+        message: "Hello Vue!",
+        message1: "This is reversed Message!",
+        showHide : false
+      },
+
+      /*what ever method we want to use or call into our application we need to 
+      decalre methods to create functions inside it
+      */
+      methods: {
+
+        //in below method we are using this, which referes to current object, and it calls our variables which are defined in our data
+        reverseMessage: function () {
+          this.message1 = this.message1.split("").reverse().join("");
+        },
+
+        //This is just simple method which switches conditon like makes true to false and false to true;
+        toggle:function(){
+          this.showHide = !this.showHide;
+        }
+      },
+    });
+  </script>
+</html>

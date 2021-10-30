@@ -1,0 +1,117 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.clock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  background: url(Clock-No-Hands-PNG-Clipart.png);
+  background-size: cover;
+}
+
+.clock::before {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: black;
+  position: absolute;
+  z-index: 1000;
+  content: "";
+}
+
+.hr,
+.mn,
+.sc {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+.hr::before {
+  height: 80px;
+  width: 6px;
+  z-index: 10;
+  background: black;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  transform: rotateZ(180deg);
+  transform-origin: top center;
+}
+.mn::before {
+  height: 90px;
+  width: 3px;
+  z-index: 5;
+  background: black;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  transform: rotateZ(180deg);
+  transform-origin: top center;
+}
+
+.sc::before {
+  height: 100px;
+  width: 2px;
+  z-index: 60;
+  background: red;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  transform: rotateZ(180deg);
+  transform-origin: top center;
+}
+
+h1 {
+  padding: 4px 4px;
+  margin-bottom: 2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  width: 60vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-control {
+  display: block;
+  width: 23rem;
+  font-size: 15px;
+  padding: 5px 15px;
+  border: 1px solid black;
+  border-radius: 10px;
+  outline: none;
+}
+
+.btn-list {
+  margin: 2em 0em;
+}
+
+.btn {
+  margin: 1rem;
+  font-size: 14px;
+  padding: 6px 6px;
+  border: 1px solid transparent;
+  background-color: #b7edff;
+  border-radius: 5px;
+  font-weight: 5000;
+  font-weight: 500;
+  cursor: pointer;
+}
+p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 1rem;
+}

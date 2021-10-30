@@ -1,0 +1,1322 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    overflow-x: hidden;
+}
+
+
+/*  Common classes */
+
+.button {
+    border: 2px solid #ed6436;
+    padding: 10px 20px;
+    border-radius: 0px 30px 30px 30px;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+/* End of common classes */
+
+/*  Hamburger Menu  */
+
+#navbar .hamburger{
+    height: 30px;
+    width: 30px;
+    background-color: #ed6436;
+    display: none;
+    cursor: pointer;
+}
+/*  End of Hamburger Menu   */
+
+
+
+#navbar h3.heading {
+    font-weight: bold;
+    margin-top: 9px;
+}
+
+#navbar h3.heading::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f1b0";
+    color: #ed6436;
+    margin-right: 10px;
+    font-size: 40px;
+}
+
+#navbar ul.navlinks {
+    color: orange;
+    list-style: none;
+    margin-top: 9px;
+}
+
+#navbar ul.navlinks li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+#navbar ul.navlinks li a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#navbar ul.navlinks li.button a {
+    text-transform: uppercase;
+    font-size: large;
+}
+
+#navbar ul.navlinks li.button:hover {
+    background-color: #ed6436;
+}
+
+#navbar ul.navlinks li.button:hover a {
+    color: #fff;
+}
+
+
+/* Hero section start */
+
+#hero-section {
+    padding-top: 40px;
+}
+
+#hero-section h2 {
+    font-size: 45px;
+    font-weight: bolder;
+    padding-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+#hero-section p {
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+#hero-section h3 {
+    font-weight: bolder;
+}
+
+#hero-section .hero-icons {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+#hero-section .hero-icons i {
+    font-size: 30px;
+}
+
+#hero-section .hero-btns {
+    margin-top: 40px;
+    margin-left: 50px;
+}
+
+#hero-section .hero-btns .button {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    margin-right: 15px;
+    padding: 13px 23px;
+}
+
+#hero-section .hero-btns .first-btn {
+    background-color: #ed6436;
+    color: #fff;
+}
+
+#hero-section .hero-btns .second-btn:hover {
+    color: #fff;
+    background-color: #ed6436;
+}
+
+#hero-section .hero-btns .first-btn:hover {
+    color: #ed6436;
+    background-color: #fff;
+}
+
+#hero-section .hero-image img {
+    transform: scaleX(-1);
+    width: 650px;
+    height: 550px;
+    margin-left: 63px;
+    margin-top: -70px;
+}
+
+
+/* Four Columns Section */
+
+#columns .pink .col-icon::before {
+    content: "\f015";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 35px;
+}
+
+#columns .green .col-icon::before {
+    content: "\f443";
+    font-size: 35px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+#columns .yellow .col-icon::before {
+    content: "\f1e3";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 35px;
+}
+
+#columns .cyan .col-icon::before {
+    content: "\f7aa";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 35px;
+}
+
+#columns span {
+    margin: 0 auto;
+}
+
+#columns .box {
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 430px;
+    width: 250px;
+    border-radius: 25px;
+}
+
+#columns .green {
+    background-color: #CDEABA;
+}
+
+#columns .yellow {
+    background-color: #F9F4B1;
+}
+
+#columns .cyan {
+    background-color: #AFF0F6;
+}
+
+#columns .pink {
+    background-color: #FED9BD;
+}
+
+#columns h3.col-heading {
+    font-weight: bold;
+}
+
+#columns p {
+    padding-right: 10px;
+}
+
+#columns a {
+    color: #000;
+    text-decoration: none;
+}
+
+#columns a::after {
+    content: "\f061";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-left: 10px;
+}
+
+
+/* Start of Teach Dog section */
+
+#teach-dog .teach-dog-img {
+    width: 620px;
+    height: 520px;
+    margin-left: -60px;
+}
+
+#teach-dog .teach-dog-heading {
+    font-weight: bold;
+    font-size: 60px;
+}
+
+#teach-dog .teach-dog-tagline {
+    color: #ed6436;
+    font-weight: bold;
+    padding: 20px 0 10px 0;
+}
+
+#teach-dog .teach-dog-text,
+#teach-dog .teach-dog-points ul li {
+    font-size: 20px;
+}
+
+#teach-dog .teach-dog-points ul {
+    list-style: none;
+    padding: 0;
+}
+
+#teach-dog .teach-dog-points ul li::before {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #CDEABA;
+    margin-right: 10px;
+}
+
+
+/* Start of pet activities section */
+
+#pet-activities .small-text {
+    color: #ed6436;
+    font-weight: bold;
+}
+
+#pet-activities .big-text {
+    font-size: 55px;
+    font-weight: bold;
+}
+
+#pet-activities .button {
+    text-decoration: none;
+    background-color: #ed6436;
+    color: #fff;
+    font-weight: bold;
+    padding: 20px 30px;
+    display: block;
+    text-align: center;
+}
+
+#pet-activities .button:hover {
+    background-color: #fff;
+    color: #ed6436;
+}
+
+#pet-activities .photos {
+    margin-top: 20px;
+}
+
+#pet-activities .photos img {
+    width: 350px;
+    height: 350px;
+    border-radius: 40px;
+}
+
+#pet-activities .photos .dog,
+.cat,
+.teddy {
+    position: relative;
+}
+
+
+#pet-activities .photos .dog-text,
+.cat-text,
+.teddy-text {
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    left: 100;
+    top: 0;
+    border-radius: 40px;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.3s all ease-out;
+}
+
+#pet-activities .photos h3 {
+    font-weight: bold;
+    color: #fff;
+}
+
+#pet-activities .photos h5 {
+    color: #fff;
+}
+
+#pet-activities .photos .dog:hover .dog-text {
+    opacity: 1;
+}
+
+#pet-activities .photos .cat:hover .cat-text {
+    opacity: 1;
+}
+
+#pet-activities .photos .teddy:hover .teddy-text {
+    opacity: 1;
+}
+
+#bone-area .bone-heading {
+    font-size: 60px;
+    font-weight: bolder;
+}
+
+#bone-area .bone-heading .black-text {
+    color: #ed6436;
+}
+
+#bone-area .bone {
+    width: 230px;
+    height: 130px;
+    position: relative;
+    cursor: pointer;
+}
+
+#bone-area .bone-text {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    transform: rotate(-10deg);
+}
+
+#bone-area .bone:hover {
+    animation: moveBone 1s ease-in-out;
+}
+
+@keyframes moveBone {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(18deg);
+    }
+}
+
+#four-circles .col-md-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#four-circles .circle-tagline {
+    padding: 30px 0;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+#four-circles .circle-text {
+    text-align: center;
+}
+
+#deal h4 {
+    color: #ed6436;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+#deal h2 {
+    font-size: 56px;
+    font-weight: bolder;
+}
+
+#deal .deal-icon i {
+    font-size: 3.6rem;
+    font-weight: bold;
+}
+
+#deal .deal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 280px;
+}
+
+#deal i.fa-check,
+#deal i.fa-times {
+    color: #91C576;
+}
+
+#deal .col-md-4 {
+    border-radius: 40px;
+    height: 560px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+#deal .first,
+.third {
+    background-color: #F2F2F4;
+}
+
+#deal .second {
+    background-color: #ed6436;
+}
+
+#deal .second i.fa-check,
+#deal .second i.fa-times,
+#deal .second h2,
+#deal .second h4 {
+    color: #F2F2F4;
+}
+
+#deal .price span.amount {
+    font-size: 3.5rem;
+    font-weight: bolder;
+}
+
+#deal .price span.top {
+    vertical-align: top;
+    font-size: 2rem;
+    font-weight: 1000;
+}
+
+#deal .second {
+    height: 610px;
+}
+
+#deal .second .deal {
+    color: #F2F2F4;
+}
+
+#deal .second span {
+    color: #F2F2F4;
+}
+
+
+/* Start of pricing section */
+
+#pricing i {
+    font-size: 35px;
+    margin-right: 20px;
+    color: #7ABA59;
+}
+
+#pricing .line {
+    display: flex;
+    flex: 1 1 auto;
+    background-image: radial-gradient(circle closest-side, #9a9a9a 99%, rgba(255, 255, 255, 0) 1%);
+    background-size: 10px 2px;
+    background-repeat: repeat;
+    background-position: center;
+    margin: 15px 15px;
+    height: 2px;
+}
+
+#pricing .sub-dog,
+#pricing .sub-dog-play,
+#pricing .sub-cat,
+#pricing .sub-cat-play {
+    display: flex;
+}
+
+#pricing .cat,
+#pricing .dog,
+#pricing .cat-play,
+#pricing .dog-play {
+    padding: 20px 0;
+}
+
+#pricing .pricing-heading{
+    letter-spacing: 1.2px; 
+    font-size: 60px; 
+    font-weight: 1000;
+}
+
+#pricing h3 {
+    font-weight: bold;
+}
+
+#pricing h4 {
+    color: #ed6436;
+    font-weight: bold;
+}
+
+#pricing h4.price {
+    color: #000;
+}
+
+.circle-chart__circle .success-stroke\ {
+    stroke: #7ABA59;
+}
+
+
+/* Starting of steps section */
+
+#steps{
+    background-color: #e8e8e6;
+    padding: 90px 0;
+}
+
+#steps .step-heading{
+    color: #ed6436;
+}
+
+
+/* Team */
+
+#team .col-md-4{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 490px;
+}
+
+#team h4, h6 {
+    font-weight: bold;
+    letter-spacing: 0.6px;
+}
+
+#team h6 {
+    color: #ed6436;
+    font-weight: bold;
+}
+
+#team a.button {
+    background-color: #ed6436;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 0.7px;
+    padding: 15px 30px;
+}
+
+#team .team-heading{
+    letter-spacing: 1.2px; 
+    font-size: 60px; 
+    font-weight: 1000;
+}
+
+#team a.button:hover{
+    background-color: #fff;
+    color: #ed6436;
+}
+
+/*Woman & Cat*/
+
+
+#woman h2, #robert h2{
+    font-size: 65px;
+    font-weight: 900;
+    color: #ed6436;
+}
+
+#woman .content, #robert .content{
+    font-size: 20px;
+    padding: 20px 0;
+}
+
+#woman h4, #robert h4{
+    color: #ed6436;
+    font-weight: bold;
+    letter-spacing: 0.4px;
+}
+
+#woman .pp. #robert .pp{
+    font-size: 18px;
+}
+
+#woman i, #robert i{
+    font-size: 50px;
+    padding: 10px 0;
+    padding-bottom: 30px;
+}
+
+#woman .image img, #robert .image img{
+    width: 760px;
+    height: 580px;
+}
+
+#robert .image img{
+    margin-left: -90px;
+    margin-top: -50px;
+}
+
+/* Crousel | Slider */
+
+#slider img{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+}
+
+#slider .text{
+    font-size: 23px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+#slider i{
+    font-size: 40px;
+    padding: 10px 0;
+}
+
+#slider h6{
+    padding: 10px 0;
+}
+
+/* Contact Us section */
+
+#contact{
+    padding: 130px 0;
+}
+
+#contact h5{
+    font-weight: bold;
+    color: #ed6436;
+    font-size: 18px;
+}
+
+#contact h2{
+    font-weight: bold;
+    font-size: 45px;
+    padding: 10px 0;
+}
+
+#contact form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 600px;
+}
+
+#contact .main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 580px;
+    background-color: #F2F2F4;
+    padding: 40px;
+    border-radius: 50px;
+    width: 450px;
+}
+
+#contact .name, .email{
+    width: 340px;
+    height: 50px;
+    border-radius: 20px;
+    outline: none;
+    padding-left: 10px;
+    border: none;
+}
+
+#contact .message{
+    width: 340px;
+    height: 140px;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-top: 10px;
+    outline: none;
+    border: none;
+    resize: none;
+}
+
+#contact .name:focus, .email:focus{
+    border: 1px solid #ed6463;
+}
+
+#contact .message:focus{
+    border: 1px solid #ed6463;
+}
+
+#contact .button{
+    background-color: #ed6436;
+    text-decoration: none;
+    border-radius: 0px 25px 25px 25px;
+    color: #fff;
+    padding: 15px 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#contact .button:hover{
+    color: #ed6436;
+    background-color: #fff;
+}
+
+
+#contact .image img{
+    width: 650px;
+    height: 530px;
+    margin-left: -100px;
+}
+
+/* Footer section */
+
+#footer h3.heading {
+    font-weight: bold;
+}
+
+#footer h3.heading::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f1b0";
+    color: #ed6436;
+    margin-right: 10px;
+    font-size: 40px;
+}
+
+#footer i{
+    width: 40px;
+    height: 40px;
+    background-color: #ed6436;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+#footer i:hover{
+    border: 2px solid #ed6436;
+    background-color: #fff;
+    color: #ed6436;
+    line-height: 38px;
+}
+
+#footer h2{
+    font-weight: bold;
+    color: #ed6436;
+    font-size: 27px;
+    letter-spacing: 0.4px;
+}
+
+#footer .time::before{
+    content: "\f017";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 15px;
+}
+
+#footer .address::before{
+    content: "\f3c5";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 15px;
+}
+
+#footer .mobile::before{
+    content: "\f084";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+#footer .links ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#footer .links a{
+    text-decoration: none;
+    color: #000;
+}
+
+#footer .emaili{
+    width: 300px;
+    height: 40px;
+    border-radius: 40px;
+    margin-left: -10px;
+    outline: none;
+    border: 2px solid #F2F2F4;
+    padding-left: 15px;
+}
+
+#footer .emaili:placeholder-shown{
+    text-align: center;
+}
+
+#footer .button{
+    border-radius: 25px 0px 25px 25px;
+    text-decoration: none;
+    background-color: #ed6436;
+    color: #fff;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    width: 290px;
+    text-align: center;
+}
+
+#footer .button:hover{
+    background-color: #fff;
+    color: #ed6436;
+}
+
+
+/* Main Footer */
+
+
+#main-footer{
+    background-color: #ed6436;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+
+/* Media Queries for mobile */
+@media (max-width:381px){
+    #hero-section .hero-btns{
+        margin-left: 5px;
+    }
+}
+
+@media (max-width:500px){
+
+    #navbar ul.navlinks .button{
+        display: inline-block;
+    }
+    #navbar ul.navlinks li {
+        display: block;
+        margin-right: 0px;
+    }
+
+    #navbar .navlinks{
+        display: none;
+        height: 200px;
+        width: 465px;
+        margin-left: -245px;
+        position: absolute;
+        background-color: #fff;
+    }
+
+    #navbar .hamburger{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        margin-left: auto; 
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+
+    #navbar .navlinks.show{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+
+    #hero-section .hero-btns{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #hero-section .hero-btns .button {
+        font-size: 15px;
+        padding: 8px 12px;
+    }
+
+    #hero-section h2,p {
+        text-align: center;
+    }
+
+    #hero-section .hero-icons {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    #hero-section .hero-image img {
+        width: 100%;
+        height: 80%;
+        margin-top: 70px;
+        margin-left: 10px;
+
+    }
+
+    #columns .row{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 50px;
+    }
+  
+    #columns .box {
+        margin-top: 25px;
+        height: 350px;
+        width: 350px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #columns p, h3,a, span{
+        text-align: center;
+    }
+
+    /* Teach dog */
+
+    #teach-dog .teach-dog-img {
+        width: 100%;
+        height: 70%;
+    }
+
+    #teach-dog .teach-dog-heading {
+        padding: 10px 30px;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    #teach-dog .teach-dog-tagline {
+        font-size: 20px;
+        text-align: center;
+        padding: 20px 0 20px 0;
+    }
+
+    #teach-dog .teach-dog-text{
+        text-align: center;
+        font-size: 20px;
+        padding: 7px 15px;
+    }
+
+    #teach-dog .teach-dog-points{
+        margin-left: 30px;
+        font-size: 18px;
+    }
+
+    #teach-dog .teach-dog-points ul li{
+        padding: 10px 0px;
+    }
+    
+    #pet-activities .small-text {
+        text-align: center;
+    }
+
+    #pet-activities .big-text {
+        font-size: 40px;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    #pet-activities .button{
+        display: inline-block;
+        margin: 15px 0;
+        padding: 12px 18px;
+    }
+
+    #pet-activities .col-md-2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #pet-activities .photos{
+        margin: 30px auto;
+        padding: 0 100px;
+    }
+
+    #pet-activities .photos img {
+        width: 300px;
+        height: 300px;
+    }
+
+    #pet-activities .photos .dog-text,
+    .cat-text,
+    .teddy-text {
+        width: 300px;
+        height: 300px;
+    }
+
+    #pet-activities .col-md-4{
+        margin: 20px auto;
+        display: flex;
+    }
+
+    /*  Bone bone-area  */
+
+    #bone-area .bone-heading {
+        font-size: 33px;
+        padding: 0 20px;
+        margin-bottom: 30px;
+        text-align: center;
+        font-weight: bolder;
+    }
+
+
+    #bone-area .bone {
+        width: 180px;
+        height: 80px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    #bone-area .bone-text {
+        font-size: 18px;
+        font-weight: normal;
+    }
+
+    #four-circles .row{
+        margin-top: -50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 1500px;
+    }
+
+
+    #four-circles .circle-text{
+        text-align: center;
+        padding: 0 18px;
+    }
+
+    #four-circles .col-md-3{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #deal .col-md-4 {
+        margin-bottom: 20px;
+        width: 300px;
+    }
+
+    #deal h4 {
+        font-size: 19px;
+    }
+
+    #deal h2 {
+        font-size: 36px;
+    }
+
+    #deal .deal-icon i {
+        font-size: 2.6rem;
+    }
+
+    #deal .deal {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 200px;
+    }
+
+    #deal .price span.amount {
+        font-size: 2.5rem;
+    }
+
+    #deal .price span.top {
+        font-size: 1.2rem;
+    }
+
+    #pricing .pricing-heading{
+        letter-spacing: 0.4px;
+        font-size: 40px; 
+    }
+     
+    #pricing h4{
+        font-size: 16px;
+    }
+  
+    #pricing .col-md-6{
+       width: 300px; 
+       margin-bottom: 25px;
+    }
+
+    #steps .col-md-4{
+       height: 400px;
+       margin-bottom: 60px;
+    }
+
+    #steps .col-6{
+        width: 350px;
+    }
+
+    #steps .step-text, h4{
+        text-align: center;
+        font-size: 20px;
+    }
+
+    #steps .col-md-4 .row{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 470px;
+    }
+
+    #team .team-heading{
+        font-size: 40px; 
+    }
+
+    #team .col-md-4{
+        margin-bottom: 30px;
+    }
+
+    #woman h2, #robert h2{
+        font-size: 44px;
+        text-align: center;
+    }
+
+    #woman .content, #robert .content{
+        padding: 20px 6px;
+        text-align: center;
+    }
+
+    #woman .pp, #robert .pp{
+        font-size: 18px;
+        text-align: center;
+    }
+
+    #woman i, #robert i{
+       text-align: center;
+       margin: 0 auto;
+    }
+
+    #woman .col-md-4, #robert .col-md-4{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    #woman .image img, #robert .image img{
+        width: 100%;
+        height: 70%;
+    }
+
+    #robert .image img{
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+
+    #robert .col-md-7{
+        margin-bottom: 40px;
+    }
+
+
+    #slider .slider-text{
+        font-size: 18px;
+        width: 300px;
+    }
+
+    #slider .name{
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    #slider{
+        margin-bottom: 130px;
+    }
+
+    #contact{
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    #contact h5{
+        font-size: 16px;
+    }
+
+    #contact h2{
+        font-size: 33px;
+        padding: 10px 0;
+    }
+
+    #contact form{
+        height: 600px;
+    }
+
+    #contact .main{
+        padding: 30px;
+        border-radius: 20px;
+        width: 300px;
+    }
+
+    #contact .name, .email{
+        width: 240px;
+    }
+
+    #contact .message{
+        width: 240px;
+    }
+
+    #contact .image img{
+        width: calc(100% + 35px);
+        height: 84%;
+        margin-top: 30px;
+        margin-left: 0;
+    }
+
+    /* Footer  */
+
+    #footer .row{
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    #footer .col-md-3{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 150px;
+        margin-bottom: 10px;
+    }
+
+    #footer h2{
+        font-size: 23px;
+    }
+
+    #footer .email{
+        display: flex;
+        width: 300px;
+    }
+
+    #footer .emaili{
+        margin-left: 0px;
+        padding-left: 0px;
+    }
+
+    #footer .links a{
+        display: block;
+        text-align: center;
+    }
+
+    #footer .heading{
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    #main-footer .col-12{
+        font-weight: bold;
+        padding: 0 30px;
+    }
+
+
+}    
+

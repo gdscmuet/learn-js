@@ -1,0 +1,24 @@
+@media only screen and (max-width:800px) {
+    .line {
+        visibility: visible;
+    }
+    .nav-menu {
+        flex-direction: column;
+    }
+    .nav-items {
+        flex-direction: column;
+        height: 0px;
+        transition: all 0.6s ease-in;
+        /* //-> the transition property will work on the selected query on which we apply toggle in JS, So it is applied on "nav-items" not on "show-items" */
+    }
+    .show-items {
+        height: 210px;
+    }
+    .nav-resp {
+        /* height: 40px; */
+    }
+    .navbar {
+        /* height: 100px; */
+    }
+    .nav-menu {}
+}
