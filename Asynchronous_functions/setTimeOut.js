@@ -20,3 +20,5 @@ let myFunction2=()=> console.log
     (
     "myFunction is called before myFunction even it is called after myFunction()"
     );
+
+
