@@ -1,0 +1,149 @@
+.column, .columns {
+	padding-left: 10px;
+    padding-right: 10px;
+}
+
+.no-padding {
+   padding-right: 0;
+   padding-left: 0;
+}
+
+.table {
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+
+.table-cell {
+	display: table-cell;
+	vertical-align: middle;
+	height: 100%;
+	width: 100%;
+}
+
+.global-page-container {
+	width: 100%;
+	display: inline-block;
+    margin: auto;
+    height: 100%;
+}
+
+.inline {
+    display: inline-block !important;
+}
+
+.refresh-loader {
+    display: none;
+    z-index: 9998;           
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+
+
+    svg {
+        opacity: 1;
+        margin-left: auto;
+        width: 40px;
+        height: auto;
+        path {
+            fill:#EEAE29;
+        
+        }
+    }
+}
+
+@keyframes rotating {
+    from {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+    
+.rotating {
+    -webkit-animation: rotating 0.7s linear infinite;
+    -moz-animation: rotating 0.7s linear infinite;
+    -ms-animation: rotating 0.7s linear infinite;
+    -o-animation: rotating 0.7s linear infinite;
+    animation: rotating 0.7s linear infinite;
+}
+
+
+
+/* **********************************************************************************************
+***********************************   MEDIA QUERIES   ******************************************* 
+********************************************************************************************** */
+
+
+
+
+// Small Screens ****************************************************************************
+/* max-width 640px *********************************************************************/
+
+@media only screen and (max-width: 40em) {
+   
+   .global-page-container {
+      width: 100%;
+   }
+   
+}   
+
+// End of small Screens
+
+
+
+// Medium Screens ***************************************************************************
+/* min-width 641px and max-width 1023px ************************************************/
+
+@media only screen and (min-width: 40.063em) and (max-width: 63.938em) {
+   
+   .global-page-container {
+      width: 100%;
+   }
+
+}
+
+// End of Medium Screens
+
+
+
+
+// Large Screens ****************************************************************************
+/* min-width 1024px and max-width 1440px ***********************************************/
+
+@media only screen and (min-width: 64em) and (max-width: 90em) { 
+   
+   .global-page-container {
+      width: 1024px;
+   }
+   
+}
+
+// End of Large Screens
+
+
+
+// Extra Large Screens **********************************************************************
+/* min-width 1441px ********************************************************************/
+
+@media only screen and (min-width: 90.063em) {
+   
+   .global-page-container {
+      width: 1320px;
+   }
+         
+}
+
+// End of Extra Large Screens

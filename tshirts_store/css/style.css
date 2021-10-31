@@ -1,0 +1,321 @@
+@charset "UTF-8";
+/*
+Placeholder
+*/
+/*
+* Dotted Border - A SASS mixin to help you increase spacing between the dots of border-style:dotted.
+* By @florbraz
+* Documentation and examples - github.com/florbraz/Dotted-Border-w-custom-spacing-SCSS-Mixin
+* V1.0
+*/
+/*
+* Function to effect of newsletter message box
+*/
+
+@keyframes showSweetAlert {
+  0% {
+    transform: scale(0.7);
+    -webkit-transform: scale(0.7);
+  }
+  45% {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+  }
+  80% {
+    transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+  }
+  to {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes hideSweetAlert {
+  0% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+  to {
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+  }
+}
+
+/**
+ * Mixin for animations and Keyframes
+ */
+.column, .columns {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.no-padding {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.table {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.table-cell {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+  width: 100%;
+}
+
+.global-page-container {
+  width: 100%;
+  display: inline-block;
+  margin: auto;
+  height: 100%;
+}
+
+.inline {
+  display: inline-block !important;
+}
+
+.refresh-loader {
+  display: none;
+  z-index: 9998;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.refresh-loader svg {
+  opacity: 1;
+  margin-left: auto;
+  width: 40px;
+  height: auto;
+}
+
+.refresh-loader svg path {
+  fill: #EEAE29;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotating {
+  animation: rotating 0.7s linear infinite;
+}
+
+/* **********************************************************************************************
+***********************************   MEDIA QUERIES   ******************************************* 
+********************************************************************************************** */
+/* max-width 640px *********************************************************************/
+@media only screen and (max-width: 40em) {
+  .global-page-container {
+    width: 100%;
+  }
+}
+
+/* min-width 641px and max-width 1023px ************************************************/
+@media only screen and (min-width: 40.063em) and (max-width: 63.938em) {
+  .global-page-container {
+    width: 100%;
+  }
+}
+
+/* min-width 1024px and max-width 1440px ***********************************************/
+@media only screen and (min-width: 64em) and (max-width: 90em) {
+  .global-page-container {
+    width: 1024px;
+  }
+}
+
+/* min-width 1441px ********************************************************************/
+@media only screen and (min-width: 90.063em) {
+  .global-page-container {
+    width: 1320px;
+  }
+}
+
+/* Variáveis *******************************************************************************/
+/* Fim das Variáveis */
+/* Global Header Styles ********************************************************************/
+header {
+  background-color: #4F4F4F;
+  box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  line-height: 0;
+  position: fixed;
+  z-index: 98;
+  top: 0;
+  width: 100%;
+}
+
+.ghost-element {
+  width: 100%;
+  height: 70px;
+}
+
+/* End of Global Header Styles */
+/* Main Header Styles ****************************************************/
+.main-header {
+  height: 70px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* End of Main Header Styles */
+/* **********************************************************************************************
+***********************************   MEDIA QUERIES   ******************************************* 
+********************************************************************************************** */
+/* max-width 640px *********************************************************************/
+/* min-width 641px and max-width 1023px ************************************************/
+/* min-width 1024px and max-width 1440px ***********************************************/
+/* min-width 1441px ********************************************************************/
+main {
+  text-align: center;
+  padding-bottom: 35px;
+}
+
+main .price-calculator {
+  padding: 35px 0;
+}
+
+main .price-calculator h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 26px;
+  color: #000000;
+  margin-bottom: 25px;
+}
+
+main .price-calculator .filters {
+  background-color: #EDEDED;
+  padding: 25px;
+  text-align: left;
+  font-family: 'Lato', sans-serif;
+}
+
+main .price-calculator .filters .single-filter {
+  display: inline-block;
+  margin-right: 25px;
+  margin-bottom: 18px;
+}
+
+main .price-calculator .filters .single-filter .option-filter {
+  font-size: 0;
+}
+
+main .price-calculator .filters .single-filter .option-filter .option-button {
+  cursor: pointer;
+  line-height: 35px;
+  padding: 0 10px;
+  display: inline-block;
+  background-color: #FFF;
+  margin: 0;
+}
+
+main .price-calculator .filters .single-filter .option-filter .selected {
+  background-color: #428CB3;
+  color: #FFF;
+}
+
+main .price-calculator .filters .single-filter input, main .price-calculator .filters .single-filter .option-button, main .price-calculator .filters .single-filter select {
+  height: 35px;
+  margin: 0;
+  font-size: 12px;
+}
+
+main .price-calculator .filters .single-filter input[type=number] {
+  max-width: 100px;
+}
+
+main .price-calculator .filters .single-filter select {
+  padding-right: 18px;
+}
+
+main .price-calculator .filters .single-filter .filter-label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+
+main .price-calculator .results {
+  padding: 12px 0;
+}
+
+main .price-calculator .results div {
+  margin-top: 15px;
+}
+
+main .price-calculator .results .product-picture {
+  border: 1px solid #9B9B9B;
+  padding: 30px;
+}
+
+main .price-calculator .results .product-description {
+  text-align: left;
+  padding-left: 25px;
+}
+
+main .price-calculator .results .product-description h2 {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+main .price-calculator .results .product-description p {
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: bold;
+}
+
+main .price-calculator .results .product-description p span {
+  font-weight: normal;
+}
+
+main .price-calculator .results .product-description #price {
+  margin-top: -8px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+main .price-calculator .results .product-description #complete-order {
+  cursor: pointer;
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+  width: 260px;
+  background-color: #33DD3A;
+  color: white;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+main .price-calculator .results .product-description #complete-order:hover {
+  background-color: #2F9733;
+  transition: 0.5s;
+}
+
+/* **********************************************************************************************
+***********************************   MEDIA QUERIES   ******************************************* 
+********************************************************************************************** */
+/* max-width 640px *********************************************************************/
+@media only screen and (max-width: 40em) {
+  main .price-calculator .results .product-description {
+    padding-left: 0;
+  }
+}
+
+/* min-width 641px and max-width 1023px ************************************************/
+/* min-width 1024px and max-width 1440px ***********************************************/
+/* min-width 1441px ********************************************************************/
+/*# sourceMappingURL=style.css.map */
